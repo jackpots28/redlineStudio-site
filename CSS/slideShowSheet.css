@@ -1,0 +1,55 @@
+* {box-sizing:border-box}
+body {font-family: Verdana,sans-serif;}
+
+/* Slideshow container */
+.slideshow-container {
+  position: relative;
+  z-index: -1;
+  display: block;
+  padding-left: 10px;
+  overflow: hidden;
+  height: 660px;
+  width: 1335px;
+}
+
+
+/* The dots/bullets/indicators */
+.dot {
+  height: 7px;
+  width: 7px;
+  margin: 2px;
+  position: relative;
+  background-color: #595959;
+  border-radius: 45%;
+  display: inline-block;
+  transition: background-color 0.4s ease;
+}
+
+.active {
+  background-color: #ccc;
+  display: inline-block;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation: fade 10s linear forwards;
+  animation: fade 10s linear forwards;
+  opacity: .85;
+}
+
+
+.slide {
+	overflow: hidden;
+}
+
+@-webkit-keyframes fade {
+  50% {opacity: 1;}
+
+@keyframes fade {
+  50% {opacity: 1;}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}

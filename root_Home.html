@@ -1,0 +1,194 @@
+<!-- All comments left in to use as reference. File is under sole use of "Redline Studios"
+The creation of this document is August 8, 2017
+By Jack Sims of "Redline Studios"
+-->
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Home Page</title>
+		<link rel="stylesheet" type="text/css" href="CSS\generalStyle.css"/>
+		<link rel="shortcut icon" type="image/ico" href="Assets\letterR.ico"/>
+		<link rel="stylesheet" type="text/css" href="CSS\slideShowSheet.css"/>
+		
+		<meta charset="UTF-8">
+		<meta name="keywords" content="">
+		<meta name="author" content="">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		
+	</head>
+
+<!-- Inline css for backup -->
+<!--
+<style>
+body {
+    font-family: "Lato", sans-serif;
+}
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+	opacity: 0.8;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover, .offcanvas a:focus{
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+</style>
+-->
+
+<style type="text/css">
+	div.welcom {
+		position: absolute;
+		margin-left: 140px;
+		margin-top: 665px;
+		overflow: hidden;
+	}	
+	
+	div.dots {
+		margin-top: 10px;
+	}
+	
+	img.logo {
+		height: 100px;
+		width: auto;
+		overflow: hidden;
+	}
+
+</style>
+
+<!-- body -->
+<body>
+
+<script src="JAVASCRIPT\navScript.js"></script>
+<script src="JAVASCRIPT\slideShow.js"></script>
+
+<!-- div for menu button -->
+<div id="menubuton" class="menuHome">
+<span style="font-size:30px;cursor:pointer;" onclick="openNav()">&#9776; </span>
+</div>
+
+<div class="welcom">
+
+
+<img src="Assets\redLineLogo.png" class="logo">
+<!--
+<p style="font-family: arial; text-align: center; font-size: 34px; font-weight: ;">Welcome to Redline Studios
+</p>
+-->
+</div>
+
+<!-- sidebar nav -->
+<div id="mySidenav" class="sidenavHome">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="portfolio_Page.html">Portfolio</a>
+  <a href="services_Page.html">Services</a>
+  <a href="about_us.html">Us</a>
+</div>
+
+<!-- slide show background -->
+<div class="slideshow-container">
+	
+	<div class="mySlides fade">
+		<img class="slide" src="Assets\IMG_1944.JPG">
+	</div>
+	
+	<div class="mySlides fade">
+		<img class="slide" src="Assets\IMG_9527.JPG">
+	</div>
+	
+	<div class="mySlides fade">
+		<img class="slide" src="Assets\IMG_1839.jpg">
+	</div>
+	
+	<div class="mySlides fade">
+		<img class="slide" src="Assets\IMG_1433.jpg">
+	</div>
+	
+</div>
+
+
+
+<div style="text-align:center" class="dots">
+		<span class="dot"></span>
+		<span class="dot"></span>
+		<span class="dot"></span>	
+		<span class="dot"></span>
+</div>
+
+
+
+
+<!-- script for slide show -->
+<script>
+	var slideIndex = 0;
+	showSlides();
+	
+	function showSlides() {
+		var i;
+		var slides = document.getElementsByClassName("mySlides");
+		var dots = document.getElementsByClassName("dot");
+		for (i = 0; i < slides.length; i++) {
+			slides[i].style.display = "none";
+		}
+		slideIndex++;
+		if (slideIndex> slides.length) {slideIndex = 1}
+		for (i = 0; i < dots.length; i++) {
+			dots[i].className = dots[i].className.replace(" active", "");
+		}
+		slides[slideIndex-1].style.display = "block";
+		dots[slideIndex-1].className += " active";
+		setTimeout(showSlides, 5000); // Change image every 2 seconds
+	}
+</script>
+<!-- footer backup links -->
+
+
+
+
+
+
+<!--Javascript functions for nav -->
+<!--
+
+<script>
+/* Set the width of the side navigation to 250px */
+function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+}
+
+/* Set the width of the side navigation to 0 */
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+}
+</script>
+-->
+
+
+</body
+</html>

@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Black and White</title>
+		<link rel="stylesheet" type="text/css" href="CSS\generalStyle.css"/>
+		<link rel="shortcut icon" type="image/ico" href="Assets\letterR.ico"/>
+		
+		<meta charset="UTF-8">
+		<meta name="keywords" content="">
+		<meta name="author" content="">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		
+		<style>
+			div.gallery {
+				margin: 20px;
+				border: 1px solid #fff;
+				width: 595px;
+				position: relative;
+			}
+
+			div.gallery:hover {
+				border: 1px solid #eee;
+				cursor: pointer;
+			}
+
+			div.gallery img {
+				width: 100%;
+				height: auto;
+			}
+
+			div.desc {
+				padding: 15px;
+				text-align: center;
+			}
+		</style>
+		
+		<style>
+			a {
+				text-decoration: none;
+				color: black;
+			}
+			
+			div.desc {
+				padding: 15px;
+				text-align: center;
+			}
+			
+			p.disc {
+				display: inline;
+				margin: 10px;
+				word-spacing: 3px;
+				font-size: 14px;
+				font-family: arial;
+			}
+		</style>
+		
+		
+		<script type="text/javascript">
+            function showImage(smSrc) {
+                document.getElementById('largeImg').src = smSrc;
+                showLargeImagePanel();
+                unselectAll();
+                setTimeout(function() {
+                    document.getElementById('largeImg').src = lgSrc;
+                }, 1)
+            }
+            function showLargeImagePanel() {
+                document.getElementById('largeImgPanel').style.display = 'block';
+            }
+            function unselectAll() {
+                if(document.selection)
+                    document.selection.empty();
+                if(window.getSelection)
+                    window.getSelection().removeAllRanges();
+            }
+        </script>
+	
+        <style type="text/css">
+            #largeImgPanel {
+				overflow: auto;
+				align: center;
+				margin: auto;
+                text-align: center;
+                display: none;
+                position: fixed;
+                z-index: 100;
+				top: 0;
+                width: 100%;
+				height: 100%;
+                background-color: rgba(0,0,0, 0.89);
+			
+            }
+			
+			#largeImg {
+				opacity: 1;
+			}
+        </style>
+		
+		
+		<style>
+			.pagination {
+				display: inline-block;
+			}
+
+			.pagination a {
+				color: black;
+				float: left;
+				padding: 8px 16px;
+				text-decoration: none;
+				transition: background-color .3s;
+			}
+
+			.pagination a.active {
+				background-color: #888;
+				color: white;
+			}
+
+			.pagination a:hover:not(.active) {	
+				background-color: #ccc;
+			}
+		</style>
+		
+		
+	</head>
+	
+<!-- div for menu button -->
+<div id="menubuton" class="menuPort">
+<span style="font-size:30px;cursor:pointer;" onclick="openNav()">&#9776; </span>
+</div>
+
+
+
+<table border="0" align="center">
+	<tr>
+		<td>
+			<div class="pagination">
+				<a href="portfolio_Page.html">Featured</a>
+				<a href="archPage.html">Architecture</a>
+				<a href="portPage.html">Portraiture</a>
+				<a href="#" class="active">Black and White</a>
+				<a href="floralPage.html">Floral</a>
+				<a href="carsPage.html">Cars</a>
+			</div>
+		</td>
+	</tr>
+</table>
+
+
+
+<table border="0" align="center">
+
+	<tr>
+		<td>
+			<div class="gallery">
+					<img src="Assets\bwGall\bench.jpg" alt="temp" width="300" height="200" onclick="showImage(this.src)">
+				<div class="desc"><p class="disc">Shutter: 1/100s</p> <p class="disc">Iso: 100</p> <p class="disc">f-Stop: 1.8</p></div>
+			</div>
+		</td>
+		<td>
+			<div class="gallery">
+					<img src="Assets\bwGall\flowers.jpg" alt="temp" width="300" height="200" onclick="showImage(this.src)">
+				<div class="desc"><p class="disc">Shutter: 1/640s</p> <p class="disc">Iso: 400</p> <p class="disc">f-Stop: 7.1</p></div>
+			</div>
+		</td>
+	</tr>
+	
+	<tr>
+		<td>
+			<div class="gallery">
+					<img src="Assets\bwGall\house.jpg" alt="temp" width="300" height="200" onclick="showImage(this.src)">
+				<div class="desc"><p class="disc">Shutter: 0.8s</p> <p class="disc">Iso: 100</p> <p class="disc">f-Stop: 1.8</p></div>
+			</div>
+		</td>
+		<td>
+			<div class="gallery">
+					<img src="Assets\bwGall\fountain.jpg" alt="temp" width="300" height="200" onclick="showImage(this.src)">
+				<div class="desc"><p class="disc">Shutter: 25s</p> <p class="disc">Iso: 100</p> <p class="disc">f-Stop: 22.00</p></div>
+			</div>
+		</td>
+	</tr>
+	
+	<tr>
+		<td>
+			<div class="gallery">
+					<img src="Assets\bwGall\buildings.jpg" alt="temp" width="300" height="200" onclick="showImage(this.src)">
+				<div class="desc"><p class="disc">Shutter: 1/200s</p> <p class="disc">Iso: 100</p> <p class="disc">f-Stop: 5.6</p></div>
+			</div>
+		</td>
+		<td>
+			<div class="gallery">
+					<img src="Assets\bwGall\gears.jpg" alt="temp" width="300" height="200" onclick="showImage(this.src)">
+				<div class="desc"><p class="disc">Shutter: 4s</p> <p class="disc">Iso: 100</p> <p class="disc">f-Stop: 20.0</p></div>
+			</div>
+		</td>
+	</tr>
+	
+</table>
+
+<!-- body -->
+<body>
+
+<script src="JAVASCRIPT\navScript.js"></script>
+
+
+<!-- sidebar nav -->
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="root_Home.html">Home</a>
+  <a href="services_Page.html">Services</a>
+  <a href="about_us.html">Us</a>
+</div>
+
+
+
+<div id="largeImgPanel" onclick="this.style.display='none'">
+		<img id="largeImg" style="height: 75%; width: auto; margin: auto; margin-top: 5%;" />
+</div>
+
+
+
+</body
+</html>
